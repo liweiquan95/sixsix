@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>冒泡</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	var a = [93,65,40,31,610,396,964,638,10];
+	// 要比n-1次轮
+	for (var i = 0; i < (a.length-1); i++) {
+		// 要比n-1次个数
+		for (var j = 0; j < (a.length-i-1); j++) {
+			if (a[j] > a[j+1]) {
+				var b = 0;
+				b = a[j+1];
+				a[j+1] = a[j];
+				a[j] = b;
+			}
+		}
+	}
+	document.write(a);
+</script>
+</html>
