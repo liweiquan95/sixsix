@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>简单移动</title>
+	<style>
+	    #box {
+	      position: absolute;
+	      width: 200px;
+	      height: 200px;
+	      background-color: red;
+	    }
+	</style>
+</head>
+<body>
+	<input type="button" value="左" id="btn1">
+  	<input type="button" value="右" id="btn2">
+  	<div id="box" style="left: 100px"></div>
+ <script type="text/javascript">
+ 	var oBtn1 = document.getElementById("btn1");
+ 	var oBtn2 = document.getElementById("btn2");
+ 	var oBox = document.getElementById("box");
+
+ 	var left = 100;
+ 	oBtn1.onclick = function () {
+ 		left -= 10;
+ 		move();
+ 	}
+ 	oBtn2.onclick = function () {
+ 		left += 10;
+ 		move();
+ 	}
+ 	function move() {
+ 		oBox.style.left = left + 'px';
+  	}
+ </script>
+
+</body>
+</html>
