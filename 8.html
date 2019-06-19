@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>动画</title>
+	<style type="text/css">
+		div {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			left: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script type="text/javascript">
+		var oBox = document.querySelector('div');
+
+		var time = 3000;
+
+		var interval = 20;
+
+		var frames = time / interval;
+		
+		var distance = 450;
+		
+		var step = distance / frames;
+
+		var frame = 0;
+
+		var nowLeft = oBox.offsetLeft;
+
+		var timer = setInterval(function(){
+			frame++;
+			oBox.style.left = nowLeft + (step * frame) + 'px';
+			if (frame >= frames) {
+				clearInterval(timer);
+			}
+		}, interval);
+
+
+	</script>
+</body>
+</html>
